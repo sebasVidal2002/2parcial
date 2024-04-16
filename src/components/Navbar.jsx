@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 
+
+//const Navbar = ({ brand, handleSearch }) => {: Define un componente funcional llamado Navbar que recibe dos propiedades: 
+//brand y handleSearch. brand es el nombre de la marca que se mostrará en el Navbar, 
+//y handleSearch es una función que se llamará cuando se realice una búsqueda
+
 const Navbar = ({ brand, handleSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [searchHistory, setSearchHistory] = useState([]);
+    const [searchHistory, setSearchHistory] = useState([]);//Declara un estado local llamado searchTerm y una función setSearchTerm para actualizar ese estado. Inicializa searchTerm como una cadena vacía.
 
     const handleChange = (event) => {
-        setSearchTerm(event.target.value);
+        setSearchTerm(event.target.value); //Define una función handleChange que se llama cuando el valor del de búsqueda cambia. Actualiza el estado searchTerm con el nuevo valor del campo de búsqueda
     };
 
     const handleSubmit = (event) => {
